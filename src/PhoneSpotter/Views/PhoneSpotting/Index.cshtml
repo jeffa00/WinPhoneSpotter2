@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using PhoneSpotter.ViewModels.PhoneSpottings
+@model PhoneSpottingsViewModel
+@{
+    ViewData["Title"] = "Windows Phone Spotting List";
+}
+
+<h1>Windows Phone Spottings</h1>
+
+@foreach (var spotting in Model.PhoneSpottings)
+{
+    <div>
+        <h2>@spotting.PhoneManufacturer @spotting.PhoneModel</h2>
+        <div class="spotting-date">@spotting.SpotTime</div>
+        
+        <div class="spotting-location">
+            <span class="coordinate-name">Latitude:</span> <span class="coordinate">@spotting.Latitude</span>
+            <span class="coordinate-name">Longitude:</span> <span class="coordinate">@spotting.Longitude</span>
+            <div>Spotting Notes:</div>
+            <div>@spotting.Notes</div>
+        </div>
+
+    </div>
+
+}

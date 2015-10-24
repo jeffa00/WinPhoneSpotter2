@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhoneSpotter.ViewModels
+namespace PhoneSpotter.ViewModels.PhoneSpottings
 {
     public class PhoneSpottingsViewModel
     {

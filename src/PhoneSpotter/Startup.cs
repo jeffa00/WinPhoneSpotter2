@@ -57,6 +57,10 @@ namespace PhoneSpotter
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddEntityFramework()
+                .AddDbContext<PhoneSpottingDbContext>(options =>
+                options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+
             // Add MVC services to the services container.
             services.AddMvc();
 
