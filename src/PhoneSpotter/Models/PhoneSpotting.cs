@@ -10,7 +10,7 @@ namespace PhoneSpotter.Models
     public class PhoneSpotting
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PhoneSpottingId { get; set; }
 
         public DateTime SpotTime { get; set; }
